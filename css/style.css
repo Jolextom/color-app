@@ -35,12 +35,12 @@ li {
 
 .navigations ul {
   display: flex;
-  /* background: lightblue; */
   justify-content: center;
   align-items: center;
   width: 20rem;
   height: 2rem;
   border-radius: 1rem;
+  background: lightblue;
 }
 
 .navigations ul li {
@@ -153,6 +153,11 @@ li {
   font-size: 1.3rem;
   display: none;
   text-align: center;
+}
+
+/* COFFE */
+.coffe {
+  z-index: 5000000;
 }
 
 /*ANIMATION*/
