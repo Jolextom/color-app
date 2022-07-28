@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* UTILITIES */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+li {
+  list-style: none;
+}
+
+/*NAVIGATIONS*/
+
+.navigations {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.navigations ul {
+  display: flex;
+  /* background: lightblue; */
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 2rem;
+  border-radius: 1rem;
+}
+
+.navigations ul li {
+  margin: 0 1rem;
+  cursor: pointer;
+  background-color: aliceblue;
+  height: 100%;
+  width: 10%;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/*COLORS*/
+
+.colors {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 12rem);
+  gap: 3rem;
+  justify-content: center;
+}
+
+.color {
+  animation: slideIn 0.5s forwards;
+  opacity: 0;
+}
+
+.color .color-bar {
+  width: 100%;
+  height: 12rem;
+  background: #add8e6;
+  box-shadow: 0.5rem 0.3rem rgba(0, 0, 0, 0.1);
+  /* border-radius: 50%; */
+}
+
+.color .color-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.9rem;
+  align-items: flex-start;
+  line-height: 0.6;
+  font-size: 12px;
+}
+.color .color-info h3 {
+  text-transform: uppercase;
+}
+
+.color .color-info span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+}
+
+.btn {
+  border: 0;
+  padding: 0.3em 0.8rem;
+}
+
+.btn-delete {
+  color: red;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background: red;
+  color: white;
+}
+
+.outline-red {
+  outline: 0.1rem solid red;
+}
+.outline-blue {
+  outline: 0.1rem solid blue;
+}
+.outline-green {
+  outline: 0.1rem solid green;
+}
+
+/*ALERT*/
+.alert {
+  position: fixed;
+  top: 1rem;
+  right: 0;
+  width: 15rem;
+  height: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  padding: 0.2rem 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.success {
+  display: block;
+  background-color: lightgreen;
+  color: green;
+}
+.danger {
+  display: block;
+  background-color: crimson;
+  color: firebrick;
+}
+
+/*GUIDE*/
+.guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 1.3rem;
+  display: none;
+  text-align: center;
+}
+
+/*ANIMATION*/
+@keyframes slideIn {
+  from {
+    transform: translateY(-5rem) rotate(-10deg);
+  }
+  to {
+    transform: translateY(0rem) rotate(0);
+    opacity: 1;
+  }
+}
